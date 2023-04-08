@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.bson.types.ObjectId;
@@ -21,6 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 public interface PostRepository extends MongoRepository<Posts, ObjectId> {
  
-
+    List<Posts> findPostsByUserId(String userId);
     
 }

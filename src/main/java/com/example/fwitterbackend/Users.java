@@ -1,48 +1,48 @@
-// package com.example.fwitterbackend;
+package com.example.fwitterbackend;
 
-// import java.util.List;
+import java.util.List;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import java.util.Collection;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-// import org.bson.types.ObjectId;
-// import org.springframework.data.annotation.Id;
-// import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-// import lombok.AllArgsConstructor;
-// import lombok.Data;
-// import lombok.NoArgsConstructor;
-
-// @Document(collection = "posts")
-// @Data
-// @AllArgsConstructor
-// @NoArgsConstructor
-// public class Users {
+@Document(collection="users")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Users {
     
+    @Id
+    private ObjectId userId ; 
 
+    private String firstName ; 
 
-//     @Id
-//     private ObjectId userId ; 
+    private String lastName ; 
 
-//     private String firstName ; 
+    private String email ; 
 
-//     private String lastName ; 
+    private String password ; 
 
-//     private String email ; 
+    private String picturePath; 
 
-//     private String password ; 
-
-//     private String picturePath; 
-
-//     private List<String> friends ; 
+    // private List<String> friends ; 
     
-//     private String location ; 
+    private String location ; 
 
-//     private String occupation ; 
+    private String occupation ; 
 
-//     private String viwedProfile; //num
+    // private String viwedProfile; //num
 
-//     private String impression ; // num
+    // private String impression ; // num
 
-//     private String createdAt; // time
+    // private String createdAt; // time
 
-//     private String updatedAt ; //time
+    // private String updatedAt ; //time
 
-// }
+}

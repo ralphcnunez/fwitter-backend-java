@@ -1,6 +1,7 @@
 package com.example.fwitterbackend;
 
 import java.util.List;
+import java.util.Map;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -16,10 +17,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Posts {
 
+    public Posts(String string, String postBody2) {
+    }
+
     @Id
     private ObjectId id; 
 
     private String userId; 
+
+    private String postBody; 
 
     private String firstName; 
 
@@ -31,10 +37,10 @@ public class Posts {
 
     private String picturePath; 
 
-    private String userPicturePath; 
+    // private String userPicturePath; 
 
-    // private List<String>likes ;
-
-    // private List<Comments> comments  ; 
+    // private Map<String, Boolean> likes;
+    
+    private String[] comments;
 
 }
